@@ -1,0 +1,59 @@
+{
+    /* Who’s enrolled and in which section of each course */
+    "students": [
+      {
+        "user_id": "12345",
+        "enrollments": [
+          { "course_id": 111, "section_id": "901" },
+          { "course_id": 222, "section_id": "902" }
+        ]
+      },
+      {
+        "user_id": "23456",
+        "enrollments": [
+          { "course_id": "111", "section_id": "901" }
+        ]
+      }
+      /* …more students… */
+    ],
+  
+    /* Every course that matters plus its MAs, it easier all assignments can be given, this information can even be included in the algorithm in the future */
+    "courses": [
+      {
+        "course_id": "111",
+        "course_name": "AP Biology",
+        "mas": [
+          {
+            "assignment_id": "555",
+            "title": "MA – Cell Respiration Test",
+            "due_dates": [
+              { "due_date": "2025-01-15", "section_id": null },   /* applies to everyone */
+              { "due_date": "2025-01-16", "section_id": "901" }     /* section override */
+            ]
+          },
+          {
+            "assignment_id": "556",
+            "title": "MA – Photosynthesis Quiz",
+            "due_dates": [
+              { "due_date": "2025-03-12", "section_id": null }
+            ]
+          }
+        ]
+      },
+      {
+        "course_id": "222",
+        "course_name": "Honors Chemistry",
+        "mas": [
+          {
+            "assignment_id": "777",
+            "title": "MA – Stoichiometry Exam",
+            "due_dates": [
+              { "due_date": "2025-02-03", "section_id": "902" }
+            ]
+          }
+        ]
+      }
+      /* …more courses… */
+    ]
+  }
+  
