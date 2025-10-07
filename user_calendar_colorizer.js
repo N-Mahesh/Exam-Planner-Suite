@@ -22598,8 +22598,10 @@ async function initUserCalendarColorizer(userId) {
 }
 
 // Auto-initialize if user_id is provided in URL params
-const urlParams = new URLSearchParams(window.location.search);
-const userId = urlParams.get('user_id');
+// const urlParams = new URLSearchParams(window.location.search);
+// const userId = urlParams.get('user_id');
+
+const userId = ENV.current_user.id
 
 if (userId) {
     console.log('Auto-initializing calendar colorizer for user:', userId);
