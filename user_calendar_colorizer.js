@@ -22598,14 +22598,13 @@ async function initUserCalendarColorizer(userId) {
 }
 
 // Auto-initialize if user_id is provided in URL params
-document.addEventListener('DOMContentLoaded', () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const userId = urlParams.get('user_id');
-    
-    if (userId) {
-        console.log('Auto-initializing calendar colorizer for user:', userId);
-        initUserCalendarColorizer(userId);
-    }
-});
+const urlParams = new URLSearchParams(window.location.search);
+const userId = urlParams.get('user_id');
 
-setInterval(() => initUserCalendarColorizer('12552287'), 100);
+console.log(userId)
+
+if (userId) {
+    console.log('Auto-initializing calendar colorizer for user:', userId);
+
+    setInterval(() => initUserCalendarColorizer(userId), 100);
+}
