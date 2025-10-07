@@ -27,7 +27,7 @@ from urllib.parse import urljoin
 from datetime import datetime
 
 BASE   = "https://eastsideprep.instructure.com"
-TOKEN  = <API_TOKEN>
+TOKEN  = os.getenv("CANVAS_TOKEN") #or raise Exception("Set CANVAS_TOKEN env var")
 if not BASE or not TOKEN:
     sys.exit("Set CANVAS_BASE and CANVAS_TOKEN env vars")
 
