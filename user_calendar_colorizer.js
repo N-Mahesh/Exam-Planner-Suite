@@ -22601,8 +22601,6 @@ async function initUserCalendarColorizer(userId) {
 const urlParams = new URLSearchParams(window.location.search);
 const userId = urlParams.get('user_id');
 
-console.log(userId)
-
 if (userId) {
     console.log('Auto-initializing calendar colorizer for user:', userId);
 
